@@ -375,7 +375,7 @@
         align-items: center;
         justify-content:center; 
         text-align: left;  
-        min-height: 80vh;
+        min-height: 60vh;
         
     }
 
@@ -410,7 +410,7 @@
       }
       
       .footer-buttons .btn {
-        width: 60%;
+        width: 80%;
         display: flex;
         align-items: center;
         text-align: center;

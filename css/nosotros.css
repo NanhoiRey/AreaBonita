@@ -72,6 +72,11 @@
     .staff-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+    .about {
+      margin-top: 0rem;
+      border-radius: 0 ;
+
+    }
   }
   @media (max-width: 600px) {
     .staff-grid {

@@ -125,7 +125,7 @@
         padding: 0.75rem 0;
       }
       .logo img {
-        width: 250px;   /* ajusta según tu diseño */
+        width: 200px;   /* ajusta según tu diseño */
         height: auto;
       }
       .nav {
@@ -239,8 +239,11 @@
       .hero-content {
         position: relative;
         z-index: 1;
-        width: 1100px;  /* ancho máximo del bloque de texto */
-        padding: 2rem;      /* padding interno para separar del borde */
+        width: 1100px;  
+        padding: 2rem;
+        margin-top: -10rem;      
+        
+        
       }
       
       .hero-content h1 {
@@ -375,14 +378,13 @@
         min-height: 80vh;
         
     }
-    /* .container{
-        padding: 0rem 0.2rem;
-    } */
+
     .hero-content {
         position: relative;
         z-index: 1;
         width: 100%;  
         padding: 0rem;
+        
         
     }
     .hero-content h1 {

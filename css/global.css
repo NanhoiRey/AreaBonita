@@ -90,7 +90,7 @@
      ========================= */
   .btn {
     display: inline-block;
-    padding: 0.30rem 1.5rem;
+    padding: 0.2rem 1.1rem;
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
     color: #fff;
@@ -145,7 +145,7 @@
       }
       .nav-link {
         text-decoration: none;
-        color: var(--color-marron-dark);
+        color: var(--color-marron);
         font-weight: var(--font-weight-semibold);
         transition: color 0.2s ease;
       }
@@ -253,106 +253,80 @@
         font-size: 1.6rem;
         margin-bottom: 1.5rem;
       }
-      .hero-content strong {
-        color: var(--color-);
-      }
 
       /* FOOTER ---- */
       .footer {
-        background: var(--color-text);
+        background: var(--color-bg-dark);
         color: var(--color-text);
-        padding: 3rem 0 1rem;
+        padding: 4rem 0 2rem;
+        text-align: center;
+        border-radius: 15% 15% 0 0;
       }
       
-      .footer-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-      
-      /* Columna izquierda */
-      .footer-contacts h3 {
+      .footer-title {
         font-size: var(--font-size-lg);
         font-weight: var(--font-weight-bold);
-        margin-bottom: 1rem;
         color: var(--color-primary);
+        margin-bottom: 1rem;
       }
       
-      .footer-contacts ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-      
-      .footer-contacts a {
-        text-decoration: none;
-        color: var(--color-marron);
-        font-weight: var(--font-weight-semibold);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        transition: color 0.2s ease;
-      }
-      .footer-contacts a:hover { color: var(--color-primary); }
-      
-      /* Columna derecha: Card WhatsApp */
-      .footer-contact-card {
-        background: #fff;
-        color: var(--color-marron-dark);
-        border-radius: 12px;
-        padding: 2rem;
-        max-width: 500px;
-        text-align: center;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      }
-      
-      .footer-contact-card p {
+      .footer-text {
         font-size: var(--font-size-md);
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         line-height: 1.6;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
       }
       
-      .footer-contact-card .btn {
-        margin-top: 0.5rem;
+      .footer-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+      
+      .footer-buttons .btn {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
       }
       
-      /* Línea inferior */
+      .footer-social {
+        margin-top: 2rem;
+      }
+      
+      .footer-social hr {
+        border: none;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        margin: 1rem auto;
+        max-width: 300px;
+      }
+      
+      .footer-instagram {
+        text-decoration: none;
+        color: var(--color-text);
+        font-weight: var(--font-weight-semibold);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.2s ease;
+      }
+      .footer-instagram:hover { color: var(--color-primary); }
+      
       .footer-bottom {
-        text-align: center;
         margin-top: 2rem;
         font-size: var(--font-size-sm);
-        color: var(--color-text);
         opacity: 0.8;
       }
-      
-      /* Responsive */
-      @media (max-width: 768px) {
-        .footer-inner {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-        .footer-contact-card {
-          max-width: 100%;
-          margin-top: 2rem;
-        }
-      }
-      
       
       /* FOOTER CLS --- */
       
  
-  /* =========================
-     Responsive
-     ========================= */
+    /* =========================
+      Responsive
+      ========================= */
   @media (max-width: 768px) {
     /* Tipografías fluidas simplificadas en móvil */
     :root {
@@ -420,6 +394,26 @@
       .hero-content p {
         font-size: var(--font-size-lg);
         margin-bottom: 1.5rem;
+      }
+
+      .footer-text {
+        max-width: 70%;
+
+      }
+
+      .footer-buttons {
+        width: 100%;
+        display: flex;
+
+      }
+      
+      .footer-buttons .btn {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
       }
   }
   

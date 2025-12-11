@@ -1,3 +1,5 @@
+
+/* NOSOTROS-- */
 .about-section {
     position: relative;
     background: white; /* fondo diferenciado */
@@ -49,14 +51,14 @@
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-bold);
     margin-bottom: 0.5rem;
-    color: var(--color-marron);
+    color: var(--color-primary);
   }
   
   .about-text h3 {
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-semibold);
     margin-bottom: 1rem;
-    color: var(--color-marron);
+    color: var(--color-primary);
   }
   
   .about-text p {
@@ -65,9 +67,13 @@
     line-height: 1.6;
   }
 
+  .about-text strong{
+    color: var(--color-primary);
+
+  }
+/* NOSOTROS CLS -- */
 
   /* SERVICIOS INICIO */
-
   .featured-services {
     padding: 5rem 0;
     background: var(--color-text); /* tono claro predominante */
@@ -119,7 +125,7 @@
   }
   
   .service-card__title {
-    font-size: var(--font-size-md);
+    font-size: 1.3rem;
     font-weight: var(--font-weight-bold);
     color: var(--color-primary);
   }
@@ -152,7 +158,7 @@
 
 
   /* CLIENTES */
-  /* Clientes */
+  
 .clients {
     padding: 4rem 0;
     background: white; /* tono claro predominante */
@@ -162,7 +168,7 @@
     text-align: center;
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-bold);
-    color: var(--color-marron-dark);
+    color: var(--color-primary);
     margin-bottom: 2rem;
   }
   

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Bonita - Inicio</title>
+
+    <!-- Preload tipografía -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Preload del CSS global para mejorar LCP -->
+    <link rel="preload" href="/css/global.css" as="style">
+
+    
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/inicio.css">
+    
+    <script src="/js/load-header.js" defer></script>
+
+
+</head>
+<body>
+
+    <header class="header"></header>
+
+
+    <section class="hero">
+        <div class="container">
+
+            <picture class="hero-image">
+    
+                <source srcset="/assets/hero.avif" type="image/avif">
+                <source srcset="/assets/hero.webp" type="image/webp">
+                <img src="/assets/hero.jpg" alt="Imagen hero de la página Home" width="1920" height="1080" loading="eager"
+                    fetchpriority="high">
+            </picture>
+        
+            <!-- Overlay oscuro reutilizable -->
+            <div class="hero-overlay"></div>
+        
+            <!-- Contenido del hero -->
+            <div class="hero-content">
+                <h1 class="title-xl">Soluciones de <strong>Alto Rendimiento</strong></h1>
+                <p class="p-md">
+                    para <strong>Espacios Verdes y Campos Deportivos.</strong>
+                </p>
+                <a href="#servicios" class="btn">Servicios</a>
+                <a href="#servicios" class="btn">Maquinaria</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container about-inner">
+            <!-- Columna izquierda -->
+            <div class="about-text">
+                <h2 class="title-lg">Sobre Nosotros.</h2>
+                <h3 class="title-md">Diseño, construcción y mantenimiento con el sello de Area Bonita</h3>
+                <p>
+                    Con el respaldo de una sólida trayectoria, garantizamos el diseño, construcción y mantenimiento con el
+                    sello de <strong>Area Bonita. </strong><br><br>
+                    
+                    <strong>Contamos con maquinaria propia de última generación y alta calidad</strong>, lo que nos
+                    permite la máxima eficiencia
+                    en cada proyecto. Además, esta flota está disponible para alquiler.
+    
+    
+                </p>
+            </div>
+    
+    
+            <!-- Columna derecha: YouTube embed -->
+            <div class="about-video">
+                <div class="video-wrapper">
+                  <iframe 
+                    src="https://www.youtube.com/embed/wDN4f0VOey0"
+                    title="Makita - Mantenimiento de campos de golf [Baviera Golf]"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+            </div>
+              
+        </div>
+    </section>
+      
+      
+
+
+
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5491112345678" class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+        <img src="/assets/wsp.svg" alt="WhatsApp" width="30" height="30">
+    </a>
+
+
+    <script src="/js/header.js" defer></script>
+</body>
+</html>

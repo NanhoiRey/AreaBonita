@@ -1,0 +1,295 @@
+/* =========================
+   Variables y base
+   ========================= */
+    :root {
+    --font-family-base: 'Source Sans 3', system-ui, sans-serif;
+
+    --font-size-xl: clamp(2rem, 4vw, 3rem);
+    --font-size-lg: clamp(1.5rem, 3vw, 2rem);
+    --font-size-md: 1rem;
+    --font-size-sm: 0.875rem;
+
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+  
+    /* Colores */
+    --color-text: #f6f5f5;
+    --color-bg-dark: #161618;
+    --color-primary: #e88848;
+    --color-marron: #ad9978;
+    --color-marron-dark: #594c2a;
+    --color-verde: #619177;
+
+    
+
+  }
+  
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: var(--font-family-base);
+    background: #fff;
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+
+
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;   /* distancia desde abajo */
+    right: 0px;    /* distancia desde la derecha */
+    z-index: 1500;  /* por encima de todo */
+    display: inline-block;
+    background: #25D366; /* color oficial de WhatsApp */
+    border-radius: 0%;
+    padding: 0.7rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-button img {
+    display: block;
+    width: 35px;
+    height: 35px;
+    
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* =========================
+     Containers globales
+     ========================= */
+  .container {
+    max-width: clamp(320px, 90%, 1200px);
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .container-lg {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* =========================
+     Botones globales
+     ========================= */
+  .btn {
+    display: inline-block;
+    padding: 0.30rem 1.5rem;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: #fff;
+    background: var(--color-marron);
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    margin: 5px;
+    text-transform: uppercase;
+  }
+  .btn:hover { background: var(--color-primary); }
+
+
+   
+  /* =========================
+     Header
+     ========================= */
+     .header {
+        background: white;
+        color: var(--color-bg-dark);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+
+        
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* logo izquierda, nav derecha */
+        padding: 0.75rem 0;
+      }
+      .logo img {
+        width: 250px;   /* ajusta según tu diseño */
+        height: auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex: 0 0 auto;
+      }
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap; /* evita saltos de línea en desktop */
+      }
+      .nav-link {
+        text-decoration: none;
+        color: var(--color-marron-dark);
+        font-weight: var(--font-weight-semibold);
+        transition: color 0.2s ease;
+      }
+      .nav-link:hover { color: var(--color-primary); }
+      .nav-toggle {
+        display: none;            /* oculto en desktop */
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        line-height: 1;
+        cursor: pointer;
+        color: var(--color-marron-dark);
+      }
+      .icon { display: inline-block; }
+      .icon-close { display: none; } /* por defecto oculto */
+      
+  
+  /* =========================
+     Hero (overlay + contenido)
+     Nota: la imagen se gestiona vía <picture> en HTML
+     ========================= */
+     .hero {
+        position: relative;
+        min-height: 110vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* contenido a la izquierda */
+        text-align: left;            /* texto alineado a la izquierda */
+        color: var(--color-text);
+        overflow: hidden;
+      }
+      
+      .hero-image img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        object-position: center;
+      }
+      
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,                /* dirección del degradado */
+          rgba(5, 5, 3, 0.786) 0%,      /* oscuro al inicio */
+          rgba(0,0,0,0.0) 85%      /* transparente hacia la derecha */
+        );
+        pointer-events: none;      /* no bloquea interacción */
+      }
+      
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        width: 1100px;  /* ancho máximo del bloque de texto */
+        padding: 2rem;      /* padding interno para separar del borde */
+      }
+      
+      .hero-content h1 {
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-bold);
+        margin-bottom: 1rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+      }
+      .hero-content strong {
+        color: var(--color-);
+      }
+      
+ 
+  /* =========================
+     Responsive
+     ========================= */
+  @media (max-width: 768px) {
+    /* Tipografías fluidas simplificadas en móvil */
+    :root {
+      --font-size-xl: 2rem;
+      --font-size-lg: 1.5rem;
+    }
+  
+    /* Toggle visible y sobre el overlay */
+    .nav-toggle {
+      display: inline-block;
+      position: relative;
+      z-index: 1200; /* por encima del menú */
+    }
+  
+    /* Menú a pantalla completa */
+    .nav-menu {
+      position: fixed;
+      inset: 0;
+      background: var(--color-text);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 1100; /* debajo del botón */
+      white-space: normal; /* permitir wraps en móvil */
+    }
+    .nav-menu.active { transform: translateX(0); }
+  
+    /* Alternar iconos del toggle */
+    .nav-toggle .icon-close { display: none; }
+    .nav-toggle.active .icon-menu { display: none; }
+    .nav-toggle.active .icon-close { display: inline-block; }
+  
+    /* Bloquear scroll al abrir menú */
+    body.menu-open { overflow: hidden; }
+
+
+    /* HERO */
+
+    .hero {
+        align-items: center;
+        justify-content:center; 
+        text-align: left;  
+        min-height: 80vh;
+        
+    }
+    /* .container{
+        padding: 0rem 0.2rem;
+    } */
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        width: 100%;  
+        padding: 0rem;
+        
+    }
+    .hero-content h1 {
+        font-size: 2.4rem;
+        font-weight: var(--font-weight-bold);
+        margin-bottom: 1rem;
+      }
+      
+      .hero-content p {
+        font-size: var(--font-size-lg);
+        margin-bottom: 1.5rem;
+      }
+  }
+  
